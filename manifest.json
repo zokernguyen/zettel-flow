@@ -1,10 +1,10 @@
 {
 	"id": "zettel-support-plugin",
-	"name": "Zetell Support Plugin",
+	"name": "Zettel Support Plugin",
 	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Support basic Zettel flow in Obsidian",
-	"author": "Ted Pan",
+	"author": "Ted Pan & Zoker Nguyen",
 	"authorUrl": "https://obsidian.md",
 	"fundingUrl": "https://obsidian.md/pricing",
 	"isDesktopOnly": true
