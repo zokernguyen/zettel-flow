@@ -1,11 +1,10 @@
 {
-	"id": "zettel-support-plugin",
-	"name": "Zettel Support Plugin",
+	"id": "zettel-flow",
+	"name": "Zettel Flow",
 	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Support basic Zettel flow in Obsidian",
 	"author": "Ted Pan & Zoker Nguyen",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"authorUrl": "https://github.com/zokernguyen",
 	"isDesktopOnly": true
 }
