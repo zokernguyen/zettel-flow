@@ -2,16 +2,16 @@ import { App, Editor, MarkdownView, Modal, Notice, Plugin, PluginSettingTab, Set
 
 // Remember to rename these classes and interfaces!
 
-interface MyPluginSettings {
+interface ZettelFlowSettings {
 	mySetting: string;
 }
 
-const DEFAULT_SETTINGS: MyPluginSettings = {
+const DEFAULT_SETTINGS: ZettelFlowSettings = {
 	mySetting: 'default'
 }
 
-export default class ZettelPlugin extends Plugin {
-	settings: MyPluginSettings;
+export default class ZettelFlowPlugin extends Plugin {
+	settings: ZettelFlowSettings;
 
 	async onload() {
 		await this.loadSettings();
@@ -20,14 +20,14 @@ export default class ZettelPlugin extends Plugin {
 		const ribbonSiblingIconEl = this.addRibbonIcon('move-right', 'New Sibling Note', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
 			new Notice('Created a new Sibling Note!');
-			ZettelHelper.newFile(this.app, true);
+			ZettelFlowHelper.newFile(this.app, true);
 		});
 
 		// This creates an icon in the left ribbon.
 		const ribbonChildIconEl = this.addRibbonIcon('split', 'New Child Note', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
 			new Notice('Created a new Child Note!');
-			ZettelHelper.newFile(this.app, false);
+			ZettelFlowHelper.newFile(this.app, false);
 		});
 
 
@@ -36,7 +36,7 @@ export default class ZettelPlugin extends Plugin {
 			id: 'New-sibling-note',
 			name: 'New Sibling Note',
 			editorCallback: (editor: Editor, view: MarkdownView) => {
-				ZettelHelper.newFile(this.app, true);				
+				ZettelFlowHelper.newFile(this.app, true);				
 			}
 		});
 
@@ -45,7 +45,7 @@ export default class ZettelPlugin extends Plugin {
 			id: 'New-child-note',
 			name: 'New Child Note',
 			editorCallback: (editor: Editor, view: MarkdownView) => {
-				ZettelHelper.newFile(this.app, false);				
+				ZettelFlowHelper.newFile(this.app, false);				
 			}
 		});
 
@@ -63,7 +63,7 @@ export default class ZettelPlugin extends Plugin {
 		// 	id: 'zettel-open-sample-modal-simple',
 		// 	name: 'Zettel Open sample modal (simple)',
 		// 	callback: () => {
-		// 		new SampleModal(this.app).open();
+		// 		new ZettelFlowModal(this.app).open();
 		// 	}
 		// });
 		// This adds an editor command that can perform some operation on the current editor instance
@@ -86,7 +86,7 @@ export default class ZettelPlugin extends Plugin {
 		// 			// If checking is true, we're simply "checking" if the command can be run.
 		// 			// If checking is false, then we want to actually perform the operation.
 		// 			if (!checking) {
-		// 				new SampleModal(this.app).open();
+		// 				new ZettelFlowModal(this.app).open();
 		// 			}
 
 		// 			// This command will only show up in Command Palette when the check function returns true
@@ -120,7 +120,7 @@ export default class ZettelPlugin extends Plugin {
 	}
 }
 
-class SampleModal extends Modal {
+class ZettelFlowModal extends Modal {
 	constructor(app: App) {
 		super(app);
 	}
@@ -162,7 +162,7 @@ class SampleModal extends Modal {
 // 	}
 // }
 
-class ZettelHelper {
+class ZettelFlowHelper {
 	constructor(){}
 
 	static openFile(app: App, file: TFile) {
@@ -208,7 +208,7 @@ class ZettelHelper {
 		if (activeFile) {
 		  const fileName = activeFile.basename;
 		  console.log(`Current file name: ${fileName}`);
-		  let newSiblingName = ZettelHelper.newName(fileName, activeFile.parent ? activeFile.parent?.children : app.vault.getMarkdownFiles(), bSibling);
+		  let newSiblingName = ZettelFlowHelper.newName(fileName, activeFile.parent ? activeFile.parent?.children : app.vault.getMarkdownFiles(), bSibling);
 		  console.log(`New ${bSibling ? 'Sibling' : 'Child'} ID: ${newSiblingName}`);
 
 		  let newFileName = '/' + newSiblingName + '.md';
@@ -216,7 +216,7 @@ class ZettelHelper {
 		  // Create the new file
 		  app.vault.create( activeFile.parent?.path + newFileName, '').then((file: TFile) => {					
 			console.log(`New file "${newFileName}" created successfully.`);
-			ZettelHelper.openFile(app, file);
+			ZettelFlowHelper.openFile(app, file);
 		  }).catch((error) => {
 			console.error('Error creating the new file:', error.message);
 		  });
