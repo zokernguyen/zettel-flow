@@ -6,7 +6,7 @@ import {
     TFolder,
 } from 'obsidian';
 
-import ZettelFlowPlugin from './main';
+import ZettelFlowPlugin from 'app/main';
 
 export class FileManager {
     private app: App;

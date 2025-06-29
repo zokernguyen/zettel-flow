@@ -4,8 +4,8 @@ import {
 	Setting,
 	App,
 } from 'obsidian';
-import ZettelFlowPlugin from './main';
-import { FileSuggest } from './suggesters/fileSuggester';
+import ZettelFlowPlugin from 'app/main';
+import { FileSuggest } from 'app/suggesters/fileSuggester';
 
 
 

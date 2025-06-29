@@ -2,7 +2,7 @@
 
 import { App, moment } from 'obsidian';
 
-import ZettelFlowPlugin from './main';
+import ZettelFlowPlugin from 'app/main';
 
 const DATE_REGEXP = /{{CDATE:([^}\n\r]*)}}/g;
 const NAME_REGEX = /{{NAME(((:UP)|(:LOW))?)}}/g;

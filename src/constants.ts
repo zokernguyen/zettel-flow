@@ -1,4 +1,4 @@
-import { ZettelFlowSettings } from "./interfaces";
+import { ZettelFlowSettings } from "app/interfaces";
 
 export const DEFAULT_SETTINGS: ZettelFlowSettings = {
     templateFilePath: '',

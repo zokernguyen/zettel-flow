@@ -1,7 +1,7 @@
 // Credits go to Liam's Periodic Notes Plugin: https://github.com/liamcain/obsidian-periodic-notes/blob/c8b1040f9d84ec8f4b8eae4782b23c2c6bf14e0e/src/ui/file-suggest.ts
 import { TAbstractFile, TFolder } from 'obsidian';
 
-import { TextInputSuggest } from 'suggesters/suggest';
+import { TextInputSuggest } from 'app/suggesuggesters/suggest';
 
 export class FolderSuggest extends TextInputSuggest<TFolder> {
 	getSuggestions(inputStr: string): TFolder[] {

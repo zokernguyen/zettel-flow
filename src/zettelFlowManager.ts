@@ -1,7 +1,7 @@
 import { App, TFile } from "obsidian";
 
-import ZettelFlowPlugin from "./main";
-import { ZettelID } from "./zettelID";
+import ZettelFlowPlugin from "app/main";
+import { ZettelID } from "app/zettelID";
 
 export class ZettelFlowManager {
 	private app: App; //Obsidian app objet

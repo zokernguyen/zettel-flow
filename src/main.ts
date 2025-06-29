@@ -1,11 +1,11 @@
-import { DEFAULT_SETTINGS } from './constants';
-import { FileManager } from './fileExplorer';
-import { Formatter } from './formater';
-import { DataGenerator } from './generator';
-import { ZettelFlowSettings } from './interfaces';
+import { DEFAULT_SETTINGS } from 'app/constants';
+import { FileManager } from 'app/fileExplorer';
+import { Formatter } from 'app/formater';
+import { DataGenerator } from 'app/generator';
+import { ZettelFlowSettings } from 'app/interfaces';
 import { Notice, Plugin } from 'obsidian';
-import { ZettelFlowSettingTab } from './setting';
-import { ZettelFlowManager } from './zettelFlowManager';
+import { ZettelFlowSettingTab } from 'app/setting';
+import { ZettelFlowManager } from 'app/zettelFlowManager';
 
 
 export default class ZettelFlowPlugin extends Plugin {

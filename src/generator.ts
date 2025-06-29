@@ -7,10 +7,10 @@ import {
 	Plugin,
 } from 'obsidian';
 
-import ZettelFlowPlugin from './main';
-import { UncoveredApp } from './uncover';
-import { retry } from './utils';
-import { TEMPLATER_PLUGIN_NAME, DEFAULT_TEMPLATE_CONTENT, RETRY_NUMBER, TIMEOUT_MILLISECOND } from './constants';
+import ZettelFlowPlugin from 'app/main';
+import { UncoveredApp } from 'app/uncover';
+import { retry } from 'app/utils';
+import { TEMPLATER_PLUGIN_NAME, DEFAULT_TEMPLATE_CONTENT, RETRY_NUMBER, TIMEOUT_MILLISECOND } from 'app/constants';
 
 export class DataGenerator {
 	private app: App;
