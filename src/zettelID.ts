@@ -1,3 +1,4 @@
+import { last } from "./utils";
 
 export class ZettelID {
 	originID: string = '';
@@ -40,7 +41,7 @@ export class ZettelID {
 			return '';
 
 		let newId = new ZettelID(zettelId);
-		const lastVal = newId.seperatedID.last();
+		const lastVal = last(newId.seperatedID);
 		let newVal = ''
 
 		if(lastVal) {
@@ -65,7 +66,7 @@ export class ZettelID {
 			return '';
 
 		let newId = new ZettelID(zettelId);
-		const lastVal = newId.seperatedID.last();
+		const lastVal = last(newId.seperatedID);
 		let newVal = ''
 
 		if(lastVal) {
