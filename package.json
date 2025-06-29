@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-zettelkasten-enhancement-plugin",
-	"version": "1.0.0",
-	"description": "This is a simple zettel plugin for Obsidian (https://obsidian.md)",
+	"name": "obsidian-zettel-writing-flow-plugin",
+	"version": "1.1.1",
+	"description": "This is a simple Obsidian (https://obsidian.md) plugin to support basic Zettel flow for writing",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",

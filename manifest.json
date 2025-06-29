@@ -1,9 +1,9 @@
 {
-	"id": "zettel-flow",
-	"name": "Zettel Flow",
-	"version": "1.0.1",
-	"minAppVersion": "0.15.0",
-	"description": "Support basic Zettel flow in Obsidian",
+	"id": "obsidian-zettel-writing-flow-plugin",
+	"name": "Zettel Writing Flow",
+	"version": "1.1.1",
+	"minAppVersion": "1.8.0",
+	"description": "Support basic Zettel flow for writing in Obsidian",
 	"author": "Ted Pan & Zoker Nguyen",
 	"authorUrl": "https://github.com/zokernguyen",
 	"isDesktopOnly": true
