@@ -21,6 +21,10 @@ test('ZettelID generating Children', () => {
       result: `12aaa1`
     },
     {
+      test: `12aaa29`,
+      result: `12aaa29a`
+    },
+    {
       test: `10wx233ax`,
       result: `10wx233ax1`
     },
@@ -59,8 +63,28 @@ test('ZettelID generating Siblings', () => {
       result: `21`
     },
     {
+      test: `29`,
+      result: `30`
+    },
+    {
+      test: `99`,
+      result: `100`
+    },
+    {
       test: `20aa`,
       result: `20ab`
+    },
+    {
+      test: `20az`,
+      result: `20aza`
+    },
+    {
+      test: `20zz`,
+      result: `20zza`
+    },
+    {
+      test: `20zy`,
+      result: `20zz`
     },
     {
       test: `232xaa92`,
