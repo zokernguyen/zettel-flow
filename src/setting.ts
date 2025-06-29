@@ -38,7 +38,7 @@ export class ZettelFlowSettingTab extends PluginSettingTab {
 
 
 		new Setting(containerEl)
-			.setName('Use Templater')
+			.setName('Use Templater Plugin')
 			.addToggle(async (component) => {
 				component
 					.setValue(this.plugin.settings.useTemplater)
